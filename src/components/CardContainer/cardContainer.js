@@ -1,5 +1,6 @@
 import React from "react";
 import { Pagination, Row, Col } from "antd";
+import PropTypes from "prop-types";
 import MovieCard from "../MovieCard/movieCard";
 import "./cardContainer.css";
 
@@ -24,8 +25,8 @@ function CardContainer(props) {
             current={page}
             defaultPageSize={20}
             total={totalResults}
-            onChange={(page) => {
-              fetchMovies(searchValue, page);
+            onChange={(pageNumber) => {
+              fetchMovies(searchValue, pageNumber);
             }}
           />
         </Col>
@@ -33,5 +34,13 @@ function CardContainer(props) {
     </div>
   );
 }
+
+CardContainer.propTypes = {
+  movies: PropTypes.object,
+  page: PropTypes.number,
+  totalResults: PropTypes.number,
+  searchValue: PropTypes.string,
+  fetchMovies: PropTypes.func,
+};
 
 export default CardContainer;

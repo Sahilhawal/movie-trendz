@@ -1,5 +1,6 @@
 import React from "react";
 import { Input, Button, Row, Col } from "antd";
+import PropTypes from "prop-types";
 import "./searchBar.css";
 
 function SearchBar(props) {
@@ -18,5 +19,10 @@ function SearchBar(props) {
     </Row>
   );
 }
+
+SearchBar.propTypes = {
+  handlInputChange: PropTypes.func,
+  handleSearchClick: PropTypes.func,
+};
 
 export default SearchBar;

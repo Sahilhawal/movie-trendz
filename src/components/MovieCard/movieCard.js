@@ -1,5 +1,7 @@
 import React, { memo } from "react";
 import { Card, Col } from "antd";
+import PropTypes from "prop-types";
+
 import "./movieCard.css";
 
 const { Meta } = Card;
@@ -28,5 +30,9 @@ function MovieCard(props) {
     </Col>
   );
 }
+
+MovieCard.propTypes = {
+  movie: PropTypes.object,
+};
 
 export default memo(MovieCard);

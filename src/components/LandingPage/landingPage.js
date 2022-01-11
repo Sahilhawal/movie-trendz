@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import CardContainer from "../CardContainer/cardContainer";
 import Navbar from "../Navbar/navbar";
 import SearchBar from "../SearchBar/searchBar";
-import { connect } from "react-redux";
 import { moviesActions } from "../../redux/actions/movies.actions";
 
 function LandingPage(props) {
@@ -59,4 +60,8 @@ const LandingPageComponent = connect(
   actionCreators
 )(LandingPage);
 
+LandingPage.propTypes = {
+  fetchMovies: PropTypes.func,
+  movies: PropTypes.object,
+};
 export default LandingPageComponent;
