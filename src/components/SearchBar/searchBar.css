@@ -1,6 +1,7 @@
 .searchBarRow {
   padding: 50px;
   background: #022839;
+  text-align: center;
 }
 
 .ant-input {
