@@ -14,17 +14,18 @@ function CardContainer(props) {
     );
   };
 
+  const { page, totalResults, searchValue, fetchMovies } = props;
   return (
     <div className="site-card-wrapper">
       <Row gutter={[24, 24]}>{renderMovieCards()}</Row>
       <Row>
         <Col span={24}>
           <Pagination
-            current={props.page}
+            current={page}
             defaultPageSize={20}
-            total={props.totalResults}
+            total={totalResults}
             onChange={(page) => {
-              props.fetchMovies(props.searchValue, page);
+              fetchMovies(searchValue, page);
             }}
           />
         </Col>
