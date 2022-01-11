@@ -5,9 +5,7 @@ import LandingPage from "./components/LandingPage/landingPage";
 function App() {
   return (
     <ErrorBoundary>
-      <div className="App">
-        <LandingPage />
-      </div>
+      <LandingPage />
     </ErrorBoundary>
   );
 }
