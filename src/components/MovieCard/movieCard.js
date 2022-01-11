@@ -14,7 +14,7 @@ function MovieCard(props) {
         hoverable
         cover={
           <img
-            alt="example"
+            alt="movie poster"
             src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${poster_path}`}
             onError={(e) => {
               e.target.onerror = null;
