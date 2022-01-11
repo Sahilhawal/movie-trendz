@@ -22,7 +22,6 @@ function LandingPage(props) {
   const handleSearchClick = () => {
     fetchMovies(searchValue, 1);
   };
-  console.log(props);
 
   return (
     <>
