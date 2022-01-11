@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import { Card, Col } from "antd";
 import PropTypes from "prop-types";
-
 import "./movieCard.css";
 
 const { Meta } = Card;
