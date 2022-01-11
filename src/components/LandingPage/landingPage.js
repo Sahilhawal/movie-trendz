@@ -64,4 +64,5 @@ LandingPage.propTypes = {
   fetchMovies: PropTypes.func,
   movies: PropTypes.object,
 };
+
 export default LandingPageComponent;

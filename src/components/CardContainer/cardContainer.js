@@ -5,6 +5,8 @@ import MovieCard from "../MovieCard/movieCard";
 import "./cardContainer.css";
 
 function CardContainer(props) {
+  const { page, totalResults, searchValue, fetchMovies } = props;
+
   const renderMovieCards = () => {
     return props?.movies?.length > 0 ? (
       props.movies.map((movie, index) => (
@@ -15,7 +17,6 @@ function CardContainer(props) {
     );
   };
 
-  const { page, totalResults, searchValue, fetchMovies } = props;
   return (
     <div className="site-card-wrapper">
       <Row gutter={[24, 24]}>{renderMovieCards()}</Row>
