@@ -10,11 +10,11 @@ function LandingPage(props) {
   const { fetchMovies, movies } = props;
   const { results, page, total_pages, total_results } = movies;
 
+  const [searchValue, setSearchValue] = useState();
+
   useEffect(() => {
     fetchMovies();
   }, []);
-
-  const [searchValue, setSearchValue] = useState();
 
   const handlInputChange = (value) => {
     setSearchValue(value);
