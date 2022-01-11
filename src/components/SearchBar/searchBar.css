@@ -1,0 +1,13 @@
+.searchBarRow {
+  padding: 50px;
+  background: #022839;
+}
+
+.ant-input {
+  width: 400px;
+}
+
+.ant-btn-primary {
+  background: #4fbdf6;
+  font-weight: bold;
+}

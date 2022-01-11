@@ -1,3 +1,10 @@
 .site-page-header {
   border-bottom: 1px solid black;
+  background: #ecf7ff;
+}
+
+.ant-page-header-heading-title {
+  color: #565656;
+  font-size: 24px;
+  font-family: "Circular-Loom";
 }
