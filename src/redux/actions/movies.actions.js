@@ -14,6 +14,7 @@ function fetchMovies(searchBy = null, pageNumber = 1) {
       },
       (error) => {
         dispatch(failure(error.toString()));
+        throw error;
       }
     );
   };
@@ -22,11 +23,10 @@ function fetchMovies(searchBy = null, pageNumber = 1) {
     return { type: moviesConstants.FETCH_MOVIES };
   }
 
-  function success(payload, pageNumber) {
+  function success(payload) {
     return {
       type: moviesConstants.FETCH_MOVIES_SUCCESS,
       payload,
-      meta: { pageNumber: pageNumber },
     };
   }
 

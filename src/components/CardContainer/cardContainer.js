@@ -5,12 +5,12 @@ import "./cardContainer.css";
 
 function CardContainer(props) {
   const renderMovieCards = () => {
-    console.log("props movies", props);
-    return (
-      props.movies &&
+    return props.movies && props.movies.length > 0 ? (
       props.movies.map((movie, index) => (
         <MovieCard movie={movie} key={index} />
       ))
+    ) : (
+      <h1 className="placeholder-text">No Movies Available</h1>
     );
   };
   return (

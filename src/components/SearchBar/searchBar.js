@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Input, Button, Row, Col } from "antd";
+import "./searchBar.css";
 
 function SearchBar(props) {
+  const { handlInputChange, handleSearchClick } = props;
   return (
-    <Row style={{ padding: "50px" }}>
+    <Row className="searchBarRow">
       <Col span={24}>
         <Input
-          style={{ width: "400px" }}
           defaultValue=""
-          onChange={(e) => props.handlInputChange(e.target.value)}
+          onChange={(e) => handlInputChange(e.target.value)}
         />
-        <Button type="primary" onClick={props.handleSearchClick}>
+        <Button type="primary" onClick={handleSearchClick}>
           Search
         </Button>
       </Col>

@@ -1,12 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
+import ErrorBoundary from "./components/ErrorBoundary/errorBoundary";
 import LandingPage from "./components/LandingPage/landingPage";
 
 function App() {
   return (
-    <div className="App">
-      <LandingPage />
-    </div>
+    <ErrorBoundary>
+      <div className="App">
+        <LandingPage />
+      </div>
+    </ErrorBoundary>
   );
 }
 

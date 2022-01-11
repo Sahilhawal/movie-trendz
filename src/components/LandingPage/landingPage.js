@@ -6,8 +6,11 @@ import { connect } from "react-redux";
 import { moviesActions } from "../../redux/actions/movies.actions";
 
 function LandingPage(props) {
+  const { fetchMovies, movies } = props;
+  const { results, page, total_pages, total_results } = movies;
+
   useEffect(() => {
-    props.fetchMovies();
+    fetchMovies();
   }, []);
 
   const [searchValue, setSearchValue] = useState();
@@ -17,7 +20,7 @@ function LandingPage(props) {
   };
 
   const handleSearchClick = () => {
-    props.fetchMovies(searchValue, 1);
+    fetchMovies(searchValue, 1);
   };
   console.log(props);
 
@@ -25,17 +28,17 @@ function LandingPage(props) {
     <>
       <Navbar />
       <SearchBar
-        fetchMovies={props.fetchMovies}
+        fetchMovies={fetchMovies}
         handlInputChange={handlInputChange}
         handleSearchClick={handleSearchClick}
       />
       <CardContainer
-        movies={props.movies.results}
-        page={props.movies.page}
-        totalPages={props.movies.total_pages}
-        totalResults={props.movies.total_results}
+        movies={results}
+        page={page}
+        totalPages={total_pages}
+        totalResults={total_results}
         searchValue={searchValue}
-        fetchMovies={props.fetchMovies}
+        fetchMovies={fetchMovies}
       />
     </>
   );

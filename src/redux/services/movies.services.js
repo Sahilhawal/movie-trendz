@@ -6,7 +6,7 @@ export const movieServices = {
 
 function fetchMovies(searchBy, pageNumber) {
   const apiURL = searchBy
-    ? `https://api.themoviedb.org/3/search/movie?api_key=2a57e3232ec81704ea0ef6bb6b3c3143&query=${searchBy}&page=${pageNumber}`
-    : `https://api.themoviedb.org/3/trending/all/day?api_key=2a57e3232ec81704ea0ef6bb6b3c3143&page=${pageNumber}`;
+    ? `${process.env.REACT_APP_API_URL}/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${searchBy}&page=${pageNumber}`
+    : `${process.env.REACT_APP_API_URL}/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}&page=${pageNumber}`;
   return fetch(apiURL).then(handleResponse);
 }
