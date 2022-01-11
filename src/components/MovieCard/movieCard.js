@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Card, Col } from "antd";
 import "./movieCard.css";
 
@@ -29,4 +29,4 @@ function MovieCard(props) {
   );
 }
 
-export default MovieCard;
+export default memo(MovieCard);
