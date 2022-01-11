@@ -14,7 +14,6 @@ function fetchMovies(searchBy = null, pageNumber = 1) {
       },
       (error) => {
         dispatch(failure(error.toString()));
-        throw error;
       }
     );
   };
