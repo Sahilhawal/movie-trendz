@@ -25,7 +25,8 @@ function CardContainer(props) {
           <Pagination
             data-testid="pagination-container"
             current={page}
-            defaultPageSize={20}
+            pageSize={20}
+            showSizeChanger={false}
             total={totalResults}
             onChange={(pageNumber) => {
               fetchMovies(searchValue, pageNumber);
