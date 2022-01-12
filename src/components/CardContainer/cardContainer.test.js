@@ -1,19 +1,8 @@
 import React from "react";
 import { render, screen } from "../../helpers/test-util";
-import CardContainer from "./cardContainer";
 import { mockResponse } from "../../helpers/mockResponse";
-
-delete window.matchMedia;
-window.matchMedia = (query) => ({
-  matches: false,
-  media: query,
-  onchange: null,
-  addListener: jest.fn(), // deprecated
-  removeListener: jest.fn(), // deprecated
-  addEventListener: jest.fn(),
-  removeEventListener: jest.fn(),
-  dispatchEvent: jest.fn(),
-});
+import "../../helpers/matchMedia.mock";
+import CardContainer from "./cardContainer";
 
 describe("<CardContainer/>", () => {
   it("should display movie card when rendered with API response", async () => {

@@ -15,6 +15,7 @@ function MovieCard(props) {
         data-testid="movie-card"
         cover={
           <img
+            data-testid="card-cover-image"
             alt="movie poster"
             src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${poster_path}`}
             onError={(e) => {
@@ -25,7 +26,10 @@ function MovieCard(props) {
           />
         }
       >
-        <Meta title={title || original_name || original_title} />
+        <Meta
+          data-testid="card-movie-title"
+          title={title || original_name || original_title}
+        />
       </Card>
     </Col>
   );
