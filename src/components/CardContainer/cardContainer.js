@@ -23,6 +23,7 @@ function CardContainer(props) {
       <Row>
         <Col span={24}>
           <Pagination
+            data-testid="pagination-container"
             current={page}
             defaultPageSize={20}
             total={totalResults}
@@ -37,7 +38,7 @@ function CardContainer(props) {
 }
 
 CardContainer.propTypes = {
-  movies: PropTypes.object,
+  movies: PropTypes.array,
   page: PropTypes.number,
   totalResults: PropTypes.number,
   searchValue: PropTypes.string,

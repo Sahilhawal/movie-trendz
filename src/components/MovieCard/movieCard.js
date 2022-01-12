@@ -12,6 +12,7 @@ function MovieCard(props) {
     <Col span={8}>
       <Card
         hoverable
+        data-testid="movie-card"
         cover={
           <img
             alt="movie poster"

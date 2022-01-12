@@ -1,4 +1,4 @@
-import { handleResponse } from "../helpers/handleResponse";
+import { handleResponse } from "../../helpers/handleResponse";
 
 export const movieServices = {
   fetchMovies,

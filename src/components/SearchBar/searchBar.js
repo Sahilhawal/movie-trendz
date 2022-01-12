@@ -9,6 +9,7 @@ function SearchBar(props) {
     <Row className="searchBarRow">
       <Col span={24}>
         <Input
+          data-testid="search-input"
           defaultValue=""
           onChange={(e) => handlInputChange(e.target.value)}
         />
